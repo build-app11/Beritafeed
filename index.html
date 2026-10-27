@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pembaca Feed</title>
+<style>
+:root{--bg:#f2f4f6;--surface:#fff;--ink:#14212b;--mute:#5d6b77;--line:#dde2e7;--acc:#e8590c;--acc-ink:#fff;--sel:#e4e9ee;--bad:#b42318;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1418;--surface:#161d23;--ink:#e6ebef;--mute:#93a1ad;--line:#27313a;--acc:#ff8a3d;--acc-ink:#1a0e05;--sel:#212b34;--bad:#ff8f84;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1418;--surface:#161d23;--ink:#e6ebef;--mute:#93a1ad;--line:#27313a;--acc:#ff8a3d;--acc-ink:#1a0e05;--sel:#212b34;--bad:#ff8f84;color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto;padding-block:24px 56px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.mark{flex:none;width:44px;height:44px;border-radius:12px;background:var(--acc);display:grid;place-items:center}
+.mark svg{width:26px;height:26px;fill:none;stroke:var(--acc-ink);stroke-width:3;stroke-linecap:round}
+.mark circle{fill:var(--acc-ink);stroke:none}
+h1{font-size:1.6rem;line-height:1.15;margin:0;letter-spacing:-.01em}
+.sub{margin:2px 0 0;color:var(--mute);font-size:.92rem}
+.tools{display:flex;gap:10px;flex:1 1 320px;justify-content:flex-end;min-width:0}
+.tools input{flex:1 1 240px;max-width:380px;min-width:0;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+button{font:inherit;cursor:pointer;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 14px}
+button:hover{border-color:var(--acc)}
+button:disabled{opacity:.55;cursor:default}
+button.pri{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);font-weight:600}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}
+nav{position:sticky;top:16px;display:flex;flex-direction:column;gap:2px;max-height:calc(100vh - 32px);overflow-y:auto}
+nav h2{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:14px 10px 4px}
+nav h2:first-child{margin-top:0}
+nav button{display:flex;justify-content:space-between;gap:8px;text-align:left;border:0;background:none;border-radius:8px;padding:6px 10px;font-size:.92rem}
+nav button .n{color:var(--mute);font-variant-numeric:tabular-nums}
+nav button[aria-pressed="true"]{background:var(--sel);font-weight:600}
+nav button[aria-pressed="true"] .n{color:var(--acc)}
+.status{display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:var(--mute);font-size:.88rem;margin-bottom:6px}
+.bar{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin-bottom:10px}
+.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .2s}
+details.fails{font-size:.84rem;color:var(--mute);margin-bottom:8px}
+details.fails summary{cursor:pointer;color:var(--bad)}
+details.fails ul{margin:6px 0 0;padding-left:18px}
+.card{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.body{flex:1;min-width:0}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:.8rem;color:var(--mute)}
+.src{color:var(--acc);font-weight:600}
+.card h3{font-size:1.05rem;line-height:1.3;margin:4px 0 6px}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{text-decoration:underline;text-decoration-color:var(--acc)}
+.ex{margin:0;color:var(--mute);font-size:.92rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.card.open .ex{display:block}
+.more{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.more button,.more a{font-size:.82rem;padding:4px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.more a:hover{border-color:var(--acc)}
+.thumb{flex:none;width:136px;height:92px;border-radius:10px;object-fit:cover;background:var(--sel)}
+.empty{padding:40px 0;color:var(--mute)}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(680px,100%);background:var(--surface);color:var(--ink);z-index:21;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.ptop{display:flex;gap:8px;align-items:center;padding:10px max(16px,env(safe-area-inset-left,0px)) 10px 16px;border-bottom:1px solid var(--line)}
+.ptop .sp{flex:1}
+.pbody{overflow-y:auto;padding:20px 20px 28px;flex:1;min-height:0}
+.pbody h2{font-size:1.4rem;line-height:1.25;margin:6px 0 14px;text-wrap:balance;overflow-wrap:anywhere}
+.pbody img.lead{display:block;width:100%;max-height:340px;object-fit:cover;border-radius:12px;margin-bottom:16px;background:var(--sel)}
+.pbody p{margin:0 0 14px;overflow-wrap:anywhere;max-width:68ch}
+.pnote{color:var(--mute);font-size:.84rem;border-top:1px solid var(--line);padding-top:12px;margin-top:20px}
+.pfoot{display:flex;gap:10px;padding:12px 16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.pfoot a{display:inline-block;padding:9px 16px;border-radius:10px;background:var(--acc);color:var(--acc-ink);font-weight:600;text-decoration:none}
+.showmore{display:block;margin:18px auto 0}
+.fresh{display:block;width:100%;margin:0 0 10px;padding:9px 14px;border-color:var(--acc);background:var(--sel);font-weight:600}
+footer{margin-top:30px;color:var(--mute);font-size:.8rem}
+@media (max-width:760px){
+.layout{grid-template-columns:1fr;gap:14px}
+nav{position:static;flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;max-height:none;align-items:center}
+nav h2{display:none}
+nav button{flex:none;white-space:nowrap;border:1px solid var(--line);background:var(--surface)}
+nav button[aria-pressed="true"]{border-color:var(--acc)}
+.thumb{width:92px;height:70px}
+.tools{justify-content:stretch}.tools input{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="19" r="2"/><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/></svg></div>
+<div><h1>Pembaca Feed</h1><p class="sub" id="viewTitle">Memuat...</p></div>
+<div class="tools">
+<input id="q" type="search" placeholder="Cari judul atau sumber" aria-label="Cari artikel" autocomplete="off">
+<button class="pri" id="refresh">Muat ulang</button>
+</div>
+</header>
+<div class="layout">
+<nav id="nav" aria-label="Kategori"></nav>
+<main>
+<div class="status" id="status"></div>
+<div class="bar" aria-hidden="true"><i id="prog"></i></div>
+<div id="fails"></div>
+<button class="fresh" id="fresh" hidden></button>
+<div id="list"></div>
+<button class="showmore" id="more" hidden>Tampilkan lebih banyak</button>
+<footer>Feed diambil oleh server dan diperbarui otomatis tiap 5 menit. Halaman ini memeriksa data baru tiap 5 menit selama tab terbuka dan aktif.</footer>
+</main>
+</div>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="pTitle" hidden>
+<div class="ptop"><button id="pPrev" aria-label="Artikel sebelumnya">←</button><button id="pNext" aria-label="Artikel berikutnya">→</button><span class="sp"></span><button id="pClose">Tutup</button></div>
+<div class="pbody" id="pBody"></div>
+<div class="pfoot"><a id="pOpen" target="_blank" rel="noopener noreferrer">Buka artikel asli</a></div>
+</aside>
+<script>
+const $ = id => document.getElementById(id);
+const fix = s => s.replace(/'/g, '’');
+const PAGE = 40, EVERY = 5 * 60 * 1000;
+const GROUPS = ['Umum', 'Startups', 'News'];
+const GROUP_LABEL = { Umum: 'Topik', Startups: 'Startups', News: 'News' };
+const groupOf = n => n.includes(': ') ? n.split(': ')[0] : 'Umum';
+const labelOf = n => fix(n.includes(': ') ? n.split(': ').slice(1).join(': ') : n);
+
+let DB = null, items = new Map(), held = new Set(), lastLoad = 0, shown = PAGE, query = '', serverMsg = '', refreshing = false;
+let view = { kind: 'cat', key: 'News & Current Affairs' };
+try { const s = JSON.parse(localStorage.getItem('reader:view') || 'null'); if (s && s.kind) view = s; } catch (e) {}
+
+const inView = (cats, v) => v.kind === 'all' || (v.kind === 'group' ? cats.some(c => groupOf(c) === v.key) : cats.includes(v.key));
+function viewName(v) { return v.kind === 'all' ? 'Semua feed' : v.kind === 'group' ? 'Semua ' + GROUP_LABEL[v.key] : fix(v.key); }
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const clock = ts => new Date(ts).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+/* ---- data ---- */
+async function fetchDB() {
+  const r = await fetch('articles.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error('http ' + r.status);
+  return r.json();
+}
+function applyDB(data, first) {
+  DB = data;
+  if (first) { items = new Map(DB.articles.map(a => [a.l, a])); held = new Set(); }
+  else DB.articles.forEach(a => { if (!items.has(a.l)) { items.set(a.l, a); held.add(a.l); } });
+  if (view.kind === 'cat' && !DB.categories.some(c => c.name === view.key)) view = { kind: 'all' };
+  lastLoad = Date.now(); buildNav(); render();
+}
+async function init() {
+  try { applyDB(await fetchDB(), true); }
+  catch (e) { waitForFirstData(); }
+}
+async function waitForFirstData() {
+  $('viewTitle').textContent = 'Menunggu data pertama';
+  for (;;) {
+    let msg = 'Belum ada articles.json. Jalankan server.py (atau fetch_feeds.py) lalu muat ulang halaman ini.';
+    let running = false;
+    try {
+      const s = await (await fetch('api/status', { cache: 'no-store' })).json();
+      running = s.running;
+      if (s.running) msg = 'Server mengambil feed untuk pertama kali: ' + s.done + ' dari ' + (s.total || '...') + ' feed.';
+      else if (s.error) msg = 'Pengambilan feed gagal: ' + s.error;
+      $('prog').style.width = (s.total ? Math.round(s.done / s.total * 100) : 0) + '%';
+    } catch (e) {}
+    const box = $('list'); box.textContent = '';
+    const p = document.createElement('p'); p.className = 'empty'; p.textContent = msg; box.appendChild(p);
+    await sleep(running ? 2000 : 6000);
+    try { applyDB(await fetchDB(), true); $('prog').style.width = '0'; return; } catch (e) {}
+  }
+}
+async function softReload(manual) {
+  try {
+    const data = await fetchDB();
+    if (DB && data.updated === DB.updated && !manual) { lastLoad = Date.now(); return; }
+    applyDB(data, false);
+    if (manual) { held.clear(); render(); }
+  } catch (e) { lastLoad = Date.now(); }
+}
+async function manualRefresh() {
+  if (refreshing) return;
+  refreshing = true; $('refresh').disabled = true;
+  try {
+    await fetch('api/refresh', { method: 'POST' });
+    for (let i = 0; i < 150; i++) {
+      await sleep(1500);
+      const s = await (await fetch('api/status', { cache: 'no-store' })).json();
+      serverMsg = s.running ? 'Server mengambil feed: ' + s.done + ' dari ' + s.total : '';
+      $('prog').style.width = (s.running && s.total ? Math.round(s.done / s.total * 100) : 0) + '%';
+      render();
+      if (!s.running) break;
+    }
+  } catch (e) { serverMsg = ''; }
+  serverMsg = ''; $('prog').style.width = '0';
+  await softReload(true);
+  refreshing = false; $('refresh').disabled = false;
+}
+
+/* ---- navigasi ---- */
+function buildNav() {
+  const nav = $('nav'); nav.textContent = '';
+  const btn = (label, n, v) => {
+    const b = document.createElement('button');
+    b.setAttribute('aria-pressed', String(v.kind === view.kind && (v.key || '') === (view.key || '')));
+    const l = document.createElement('span'); l.textContent = label;
+    const c = document.createElement('span'); c.className = 'n'; c.textContent = n;
+    b.append(l, c);
+    b.addEventListener('click', () => { view = v; shown = PAGE; try { localStorage.setItem('reader:view', JSON.stringify(v)); } catch (e) {} buildNav(); render(); });
+    nav.appendChild(b);
+  };
+  btn('Semua feed', DB.feeds.length, { kind: 'all' });
+  GROUPS.forEach(g => {
+    const cats = DB.categories.filter(c => groupOf(c.name) === g);
+    if (!cats.length) return;
+    const h = document.createElement('h2'); h.textContent = GROUP_LABEL[g]; nav.appendChild(h);
+    if (g !== 'Umum') btn('Semua ' + GROUP_LABEL[g], DB.feeds.filter(f => inView(f.cats, { kind: 'group', key: g })).length, { kind: 'group', key: g });
+    cats.forEach(c => btn(labelOf(c.name), c.count, { kind: 'cat', key: c.name }));
+  });
+}
+
+/* ---- tampilan ---- */
+function ago(ts) {
+  if (!ts) return '';
+  const s = (Date.now() - ts) / 1000;
+  if (s < 90) return 'baru saja';
+  if (s < 3600) return Math.floor(s / 60) + ' menit lalu';
+  if (s < 86400) return Math.floor(s / 3600) + ' jam lalu';
+  if (s < 86400 * 30) return Math.floor(s / 86400) + ' hari lalu';
+  return new Date(ts).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+function card(a, list, i) {
+  const c = document.createElement('article'); c.className = 'card';
+  const body = document.createElement('div'); body.className = 'body';
+  const meta = document.createElement('div'); meta.className = 'meta';
+  const s = document.createElement('span'); s.className = 'src'; s.textContent = a.s;
+  const t = document.createElement('span'); t.textContent = ago(a.ts);
+  meta.append(s, t);
+  const h = document.createElement('h3'), link = document.createElement('a');
+  link.href = a.l; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = a.t; h.appendChild(link);
+  link.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault(); openPanel(list, i, link);
+  });
+  body.append(meta, h);
+  if (a.e && a.e !== a.t) { const p = document.createElement('p'); p.className = 'ex'; p.textContent = a.e; body.appendChild(p); }
+  const more = document.createElement('div'); more.className = 'more';
+  const rb = document.createElement('button'); rb.textContent = 'Baca di sini';
+  rb.addEventListener('click', () => openPanel(list, i, rb));
+  const o = document.createElement('a'); o.href = a.l; o.target = '_blank'; o.rel = 'noopener noreferrer'; o.textContent = 'Buka artikel asli';
+  more.append(rb, o); body.appendChild(more);
+  c.appendChild(body);
+  if (a.i) {
+    const im = document.createElement('img'); im.className = 'thumb'; im.loading = 'lazy'; im.alt = ''; im.referrerPolicy = 'no-referrer';
+    im.addEventListener('error', () => im.remove()); im.addEventListener('click', () => openPanel(list, i, rb)); im.style.cursor = 'pointer'; im.src = a.i; c.appendChild(im);
+  }
+  return c;
+}
+function render() {
+  if (!DB) return;
+  const vf = DB.feeds.filter(f => inView(f.cats, view)), bad = vf.filter(f => !f.ok);
+  $('viewTitle').textContent = viewName(view) + ' · ' + vf.length + ' feed';
+  const inv = [...items.values()].filter(a => !held.has(a.l) && inView(a.c, view));
+  const q = query.trim().toLowerCase();
+  const arr = inv.filter(a => !q || a.t.toLowerCase().includes(q) || a.s.toLowerCase().includes(q) || a.e.toLowerCase().includes(q))
+                 .sort((a, b) => (b.ts || 0) - (a.ts || 0));
+  const st = $('status'); st.textContent = '';
+  const sp = document.createElement('span');
+  sp.textContent = serverMsg || (vf.length - bad.length) + ' dari ' + vf.length + ' feed berhasil · ' + inv.length + ' artikel · server memperbarui ' + clock(DB.updated);
+  st.appendChild(sp);
+  const fb = $('fails'); fb.textContent = '';
+  if (bad.length) {
+    const d = document.createElement('details'); d.className = 'fails';
+    const sm = document.createElement('summary'); sm.textContent = bad.length + ' feed gagal diambil server'; d.appendChild(sm);
+    const ul = document.createElement('ul');
+    bad.forEach(f => { const li = document.createElement('li'); li.textContent = f.t + (f.error ? ' (' + f.error + ')' : ''); ul.appendChild(li); });
+    d.appendChild(ul); fb.appendChild(d);
+  }
+  const fr = $('fresh'); fr.hidden = !held.size;
+  if (held.size) fr.textContent = held.size + ' artikel baru. Klik untuk menampilkan.';
+  const box = $('list'); box.textContent = '';
+  if (!arr.length) {
+    const e = document.createElement('p'); e.className = 'empty';
+    e.textContent = query ? 'Tidak ada artikel yang cocok dengan pencarian.' : 'Belum ada artikel di kategori ini.';
+    box.appendChild(e);
+  } else { const part = arr.slice(0, shown); part.forEach((a, i) => box.appendChild(card(a, part, i))); }
+  $('more').hidden = arr.length <= shown;
+}
+
+/* ---- baca di sini ---- */
+let plist = [], pidx = 0, lastFocus = null;
+function fillPanel() {
+  const a = plist[pidx], box = $('pBody'); box.textContent = '';
+  const meta = document.createElement('div'); meta.className = 'meta';
+  const s = document.createElement('span'); s.className = 'src'; s.textContent = a.s;
+  const t = document.createElement('span'); t.textContent = ago(a.ts);
+  meta.append(s, t);
+  const h = document.createElement('h2'); h.id = 'pTitle'; h.textContent = a.t;
+  box.append(meta, h);
+  if (a.i) { const im = document.createElement('img'); im.className = 'lead'; im.alt = ''; im.referrerPolicy = 'no-referrer'; im.addEventListener('error', () => im.remove()); im.src = a.i; box.appendChild(im); }
+  const paras = (a.f || a.e || '').split('\n\n').filter(Boolean);
+  paras.forEach(x => { const p = document.createElement('p'); p.textContent = x; box.appendChild(p); });
+  const note = document.createElement('p'); note.className = 'pnote';
+  note.textContent = paras.length ? 'Teks ini diambil dari feed ' + a.s + '. Feed biasanya hanya menyertakan sebagian isi. Buka artikel asli untuk membaca selengkapnya.'
+                                  : 'Feed ' + a.s + ' tidak menyertakan isi artikel. Buka artikel asli untuk membacanya.';
+  box.appendChild(note);
+  $('pOpen').href = a.l;
+  $('pPrev').disabled = pidx === 0; $('pNext').disabled = pidx >= plist.length - 1;
+  box.scrollTop = 0;
+}
+function openPanel(list, i, opener) {
+  plist = list; pidx = i; lastFocus = opener; fillPanel();
+  $('scrim').hidden = false; $('panel').hidden = false;
+  document.documentElement.style.overflow = 'hidden';
+  $('pClose').focus();
+}
+function closePanel() {
+  $('panel').hidden = true; $('scrim').hidden = true;
+  document.documentElement.style.overflow = '';
+  if (lastFocus && lastFocus.isConnected) lastFocus.focus();
+}
+function step(d) { const n = pidx + d; if (n >= 0 && n < plist.length) { pidx = n; fillPanel(); } }
+$('pClose').addEventListener('click', closePanel);
+$('scrim').addEventListener('click', closePanel);
+$('pPrev').addEventListener('click', () => step(-1));
+$('pNext').addEventListener('click', () => step(1));
+document.addEventListener('keydown', e => {
+  if ($('panel').hidden) return;
+  if (e.key === 'Escape') { closePanel(); return; }
+  if (e.key === 'ArrowLeft') { step(-1); return; }
+  if (e.key === 'ArrowRight') { step(1); return; }
+  if (e.key === 'Tab') {
+    const f = [$('pPrev'), $('pNext'), $('pClose'), $('pOpen')].filter(x => !x.disabled);
+    const i = f.indexOf(document.activeElement);
+    if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+  }
+});
+
+/* ---- kontrol ---- */
+$('q').addEventListener('input', e => { query = e.target.value; shown = PAGE; render(); });
+$('more').addEventListener('click', () => { shown += PAGE; render(); });
+$('refresh').addEventListener('click', manualRefresh);
+$('fresh').addEventListener('click', () => { held.clear(); shown = PAGE; render(); window.scrollTo({ top: 0 }); });
+setInterval(() => { if (DB && !document.hidden && !refreshing && Date.now() - lastLoad >= EVERY - 1000) softReload(false); }, 30000);
+document.addEventListener('visibilitychange', () => { if (DB && !document.hidden && !refreshing && Date.now() - lastLoad >= EVERY) softReload(false); });
+init();
+</script>
+</body>
+</html>

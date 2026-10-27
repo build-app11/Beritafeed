@@ -1,0 +1,1532 @@
+[
+ {
+  "name": "News & Current Affairs",
+  "items": [
+   {
+    "t": "NBC News",
+    "u": "https://feeds.nbcnews.com/nbcnews/public/news"
+   },
+   {
+    "t": "CBS News",
+    "u": "https://www.cbsnews.com/feeds/rss/main.rss"
+   },
+   {
+    "t": "PBS News",
+    "u": "https://www.pbs.org/newshour/feeds/rss/headlines"
+   },
+   {
+    "t": "UPI.com » U.S. News",
+    "u": "https://rss.upi.com/news/tn_us.rss"
+   },
+   {
+    "t": "The New York Times",
+    "u": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+   },
+   {
+    "t": "WSJ.com » U.S. News",
+    "u": "https://feeds.content.dowjones.io/public/rss/RSSUSnews"
+   },
+   {
+    "t": "Los Angeles Times",
+    "u": "https://www.latimes.com/local/rss2.0.xml"
+   },
+   {
+    "t": "New York Post",
+    "u": "https://nypost.com/feed/"
+   },
+   {
+    "t": "The Washington Times",
+    "u": "https://www.washingtontimes.com/rss/headlines/news"
+   },
+   {
+    "t": "Vox",
+    "u": "https://www.vox.com/rss/index.xml"
+   }
+  ]
+ },
+ {
+  "name": "Politics",
+  "items": [
+   {
+    "t": "The New York Times » Politics",
+    "u": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/politics/rss.xml"
+   },
+   {
+    "t": "NPR » Politics",
+    "u": "https://feeds.npr.org/1014/rss.xml"
+   },
+   {
+    "t": "POLITICO",
+    "u": "https://www.politico.com/rss/politicopicks.xml"
+   },
+   {
+    "t": "ProPublica",
+    "u": "https://www.propublica.org/feeds/propublica/main"
+   },
+   {
+    "t": "PolitiFact",
+    "u": "https://www.politifact.com/rss/all/"
+   },
+   {
+    "t": "RealClearPolitics",
+    "u": "https://www.realclearpolitics.com/index.xml"
+   }
+  ]
+ },
+ {
+  "name": "Technology",
+  "items": [
+   {
+    "t": "IEEE Spectrum",
+    "u": "https://feeds.feedburner.com/IeeeSpectrumFullText"
+   },
+   {
+    "t": "WIRED",
+    "u": "https://www.wired.com/feed/rss"
+   },
+   {
+    "t": "The Verge",
+    "u": "https://www.theverge.com/rss/index.xml"
+   },
+   {
+    "t": "TechCrunch",
+    "u": "https://techcrunch.com/category/artificial-intelligence/feed/"
+   },
+   {
+    "t": "VentureBeat",
+    "u": "https://feeds.feedburner.com/venturebeat/SZYF"
+   },
+   {
+    "t": "O’Reilly",
+    "u": "https://feeds.feedburner.com/oreilly/radar/atom"
+   },
+   {
+    "t": "Hackaday Blog",
+    "u": "https://hackaday.com/blog/feed/"
+   },
+   {
+    "t": "BleepingComputer",
+    "u": "https://www.bleepingcomputer.com/feed/"
+   },
+   {
+    "t": "TechRepublic",
+    "u": "https://www.techrepublic.com/rssfeeds/articles/"
+   },
+   {
+    "t": "Tech.eu",
+    "u": "https://tech.eu/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Artificial Intelligence",
+  "items": [
+   {
+    "t": "Google Research Blog",
+    "u": "https://research.google/blog/rss/"
+   },
+   {
+    "t": "OpenAI News",
+    "u": "https://openai.com/news/rss.xml"
+   },
+   {
+    "t": "BAIR Blog",
+    "u": "https://bair.berkeley.edu/blog/feed.xml"
+   },
+   {
+    "t": "MIT News » Artificial intelligence",
+    "u": "https://news.mit.edu/rss/topic/artificial-intelligence2"
+   },
+   {
+    "t": "TechCrunch » AI",
+    "u": "https://techcrunch.com/category/artificial-intelligence/feed/"
+   },
+   {
+    "t": "Ars Technica » AI",
+    "u": "https://arstechnica.com/ai/feed/"
+   },
+   {
+    "t": "Fast Company » Artificial Intelligence",
+    "u": "https://www.fastcompany.com/section/artificial-intelligence/rss"
+   },
+   {
+    "t": "AI Weekly",
+    "u": "https://aiweekly.co/issues.rss"
+   }
+  ]
+ },
+ {
+  "name": "Machine Learning",
+  "items": [
+   {
+    "t": "KDnuggets News",
+    "u": "https://www.kdnuggets.com/feed"
+   },
+   {
+    "t": "Google Research Blog (feedburner)",
+    "u": "https://feeds.feedburner.com/blogspot/gJZg"
+   },
+   {
+    "t": "Apple Machine Learning Research",
+    "u": "https://machinelearning.apple.com/rss.xml"
+   },
+   {
+    "t": "Machine Learning Mastery",
+    "u": "https://feeds.feedburner.com/MachineLearningMastery"
+   },
+   {
+    "t": "Towards Data Science",
+    "u": "https://towardsdatascience.com/feed/"
+   },
+   {
+    "t": "Distill",
+    "u": "https://distill.pub/rss.xml"
+   },
+   {
+    "t": "MIT News » Machine Learning",
+    "u": "https://news.mit.edu/rss/topic/machine-learning"
+   },
+   {
+    "t": "Nature Machine Intelligence",
+    "u": "https://www.nature.com/natmachintell.rss"
+   },
+   {
+    "t": "Hugging Face Blog",
+    "u": "https://huggingface.co/blog/feed.xml"
+   },
+   {
+    "t": "O’Reilly Media » AI & ML",
+    "u": "https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml"
+   }
+  ]
+ },
+ {
+  "name": "Cybersecurity",
+  "items": [
+   {
+    "t": "Krebs on Security",
+    "u": "https://krebsonsecurity.com/feed/"
+   },
+   {
+    "t": "The Hacker News",
+    "u": "https://feeds.feedburner.com/TheHackersNews?format=xml"
+   },
+   {
+    "t": "The New York Times » Cybersecurity",
+    "u": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/cybersecurity/rss.xml"
+   },
+   {
+    "t": "The Record Media",
+    "u": "https://therecord.media/feed"
+   },
+   {
+    "t": "SecurityWeek",
+    "u": "https://www.securityweek.com/feed/"
+   },
+   {
+    "t": "Dark Reading",
+    "u": "https://www.darkreading.com/rss.xml"
+   },
+   {
+    "t": "CSO Online",
+    "u": "https://www.csoonline.com/feed/"
+   },
+   {
+    "t": "The National Cyber Security Centre",
+    "u": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"
+   }
+  ]
+ },
+ {
+  "name": "Privacy & Data Protection",
+  "items": [
+   {
+    "t": "DLA Piper » Privacy Matters",
+    "u": "https://privacymatters.dlapiper.com/feed/"
+   },
+   {
+    "t": "Norton Rose Fulbright Data Protection Report",
+    "u": "https://feeds.feedburner.com/DataProtectionReport"
+   },
+   {
+    "t": "Fox Rothschild » Privacy Compliance & Data Security",
+    "u": "https://dataprivacy.foxrothschild.com/feed/"
+   },
+   {
+    "t": "Sidley » Data Matters",
+    "u": "https://datamatters.sidley.com/feed/"
+   },
+   {
+    "t": "Inside Privacy",
+    "u": "https://www.insideprivacy.com/feed/"
+   },
+   {
+    "t": "TeachPrivacy » Privacy+Security Blog",
+    "u": "https://teachprivacy.com/feed/"
+   },
+   {
+    "t": "Secuvy Blog",
+    "u": "https://secuvy.ai/feed/"
+   },
+   {
+    "t": "Byte Back",
+    "u": "https://www.bytebacklaw.com/feed/"
+   },
+   {
+    "t": "Wyrick Robbins Practical Privacy",
+    "u": "https://practicalprivacy.wyrick.com/feed"
+   },
+   {
+    "t": "Greenberg Traurig’s Data Privacy Dish",
+    "u": "https://www.gtlaw-dataprivacydish.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Programming & Software Development",
+  "items": [
+   {
+    "t": "Scott Hanselman Blog",
+    "u": "http://feeds.hanselman.com/ScottHanselman"
+   },
+   {
+    "t": "DZone",
+    "u": "https://feeds.dzone.com/home"
+   },
+   {
+    "t": "Google Developers Blog",
+    "u": "https://feeds.feedburner.com/GDBcode"
+   },
+   {
+    "t": "DEV Community",
+    "u": "https://dev.to/feed"
+   },
+   {
+    "t": "Treehouse Blog",
+    "u": "http://blog.teamtreehouse.com/feed"
+   },
+   {
+    "t": "The Crazy Programmer",
+    "u": "https://www.thecrazyprogrammer.com/feed"
+   },
+   {
+    "t": "CSS-Tricks",
+    "u": "https://css-tricks.com/feed/"
+   },
+   {
+    "t": "CodePen Blog",
+    "u": "https://blog.codepen.io/feed/"
+   },
+   {
+    "t": "CodeSignal Blog",
+    "u": "https://codesignal.com/feed/"
+   },
+   {
+    "t": "The Stack Overflow Blog",
+    "u": "https://stackoverflow.blog/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Web Design & UI/UX",
+  "items": [
+   {
+    "t": "Line25.com",
+    "u": "https://feeds.feedburner.com/Line25"
+   },
+   {
+    "t": "Webdesigner Depot",
+    "u": "https://feeds2.feedburner.com/webdesignerdepot"
+   },
+   {
+    "t": "Smashing Magazine",
+    "u": "https://www.smashingmagazine.com/feed"
+   },
+   {
+    "t": "Web Design Ledger",
+    "u": "https://webdesignledger.com/feed/"
+   },
+   {
+    "t": "The UX Booth",
+    "u": "https://feedpress.me/uxbooth"
+   },
+   {
+    "t": "UX Collective",
+    "u": "https://uxdesign.cc/feed"
+   },
+   {
+    "t": "UX Planet",
+    "u": "https://uxplanet.org/feed"
+   },
+   {
+    "t": "UX Movement",
+    "u": "https://feeds.feedburner.com/uxmovement"
+   },
+   {
+    "t": "UXPin Blog » UX Design",
+    "u": "https://www.uxpin.com/studio/blog/category/ux-design/feed/"
+   },
+   {
+    "t": "Envato Tuts Web Design",
+    "u": "https://webdesign.tutsplus.com/posts.atom"
+   }
+  ]
+ },
+ {
+  "name": "WordPress & Web Development",
+  "items": [
+   {
+    "t": "Make WordPress Core",
+    "u": "https://make.wordpress.org/core/feed/"
+   },
+   {
+    "t": "WordPress Developer Blog",
+    "u": "https://developer.wordpress.org/news/feed/"
+   },
+   {
+    "t": "WordPress News",
+    "u": "https://wordpress.org/news/feed/"
+   },
+   {
+    "t": "WordPress.tv",
+    "u": "https://wordpress.tv/feed/"
+   },
+   {
+    "t": "ThemeShaper",
+    "u": "https://themeshaper.com/feed/"
+   },
+   {
+    "t": "The WordPress Blog",
+    "u": "https://wordpress.com/blog/feed/"
+   },
+   {
+    "t": "WordPress Development Stack Exchange",
+    "u": "https://wordpress.stackexchange.com/feeds?format=xml"
+   },
+   {
+    "t": "Delicious Brains Blog",
+    "u": "https://deliciousbrains.com/blog/feed"
+   },
+   {
+    "t": "WPShout",
+    "u": "https://wpshout.com/feed/"
+   },
+   {
+    "t": "SpinupWP Blog",
+    "u": "https://spinupwp.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Robotics",
+  "items": [
+   {
+    "t": "Robohub",
+    "u": "https://robohub.org/feed/"
+   },
+   {
+    "t": "The Robot Report",
+    "u": "https://www.therobotreport.com/feed/"
+   },
+   {
+    "t": "Robotiq Blog",
+    "u": "https://blog.robotiq.com/rss.xml"
+   },
+   {
+    "t": "New Atlas",
+    "u": "https://newatlas.com/robotics/index.rss"
+   },
+   {
+    "t": "Roboticmagazine",
+    "u": "https://www.roboticmagazine.com/feed"
+   },
+   {
+    "t": "Tech Xplore » Robotics",
+    "u": "https://techxplore.com/rss-feed/robotics-news/"
+   },
+   {
+    "t": "Make",
+    "u": "https://makezine.com/category/technology/robotics/feed/"
+   },
+   {
+    "t": "SingularityHub » Robotics",
+    "u": "https://singularityhub.com/feed/"
+   },
+   {
+    "t": "RoboDK Blog",
+    "u": "https://robodk.com/blog/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Business",
+  "items": [
+   {
+    "t": "Forbes » Business",
+    "u": "https://www.forbes.com/business/feed/"
+   },
+   {
+    "t": "Business Insider",
+    "u": "https://feeds.businessinsider.com/custom/all"
+   },
+   {
+    "t": "Fast Company",
+    "u": "https://www.fastcompany.com/latest/rss?truncated=true"
+   },
+   {
+    "t": "Inc.",
+    "u": "https://www.inc.com/rss/"
+   },
+   {
+    "t": "Foundr Blog",
+    "u": "https://foundr.com/articles/feed"
+   }
+  ]
+ },
+ {
+  "name": "Finance",
+  "items": [
+   {
+    "t": "Good Financial Cents",
+    "u": "https://www.goodfinancialcents.com/feed/"
+   },
+   {
+    "t": "The Penny Hoarder",
+    "u": "https://www.thepennyhoarder.com/rss/"
+   },
+   {
+    "t": "Get Rich Slowly",
+    "u": "https://www.getrichslowly.org/feed/"
+   },
+   {
+    "t": "Making Sense Of Cents Blog",
+    "u": "https://www.makingsenseofcents.com/feed"
+   },
+   {
+    "t": "Financial Samurai",
+    "u": "https://www.financialsamurai.com/feed/"
+   },
+   {
+    "t": "Thomas Guenter",
+    "u": "https://medium.com/feed/@thomasguenter"
+   },
+   {
+    "t": "The College Investor",
+    "u": "https://thecollegeinvestor.com/feed/"
+   },
+   {
+    "t": "Clever Girl Finance Blog",
+    "u": "https://www.clevergirlfinance.com/feed/"
+   },
+   {
+    "t": "Side Hustle Nation Blog",
+    "u": "https://www.sidehustlenation.com/feed/"
+   },
+   {
+    "t": "Millennial Money » Investing",
+    "u": "https://millennialmoney.com/category/investing/feed/"
+   },
+   {
+    "t": "Best Wallet Hacks",
+    "u": "https://wallethacks.com/feed/"
+   },
+   {
+    "t": "Rob Berger",
+    "u": "https://robberger.com/feed/"
+   },
+   {
+    "t": "The Savvy Couple Blog",
+    "u": "https://thesavvycouple.com/blog/feed/"
+   },
+   {
+    "t": "Mariner Finance Blog",
+    "u": "https://feeds.feedburner.com/MarinerFinance"
+   },
+   {
+    "t": "Michael Kitces (Nerd’s Eye View)",
+    "u": "https://feeds.kitces.com/KitcesNerdsEyeView"
+   },
+   {
+    "t": "Vital Dollar Blog",
+    "u": "https://vitaldollar.com/blog/feed/"
+   },
+   {
+    "t": "Financial Panther",
+    "u": "https://financialpanther.com/feed/"
+   },
+   {
+    "t": "Seedtime Blog",
+    "u": "https://seedtime.com/feed/"
+   },
+   {
+    "t": "The Simple Dollar",
+    "u": "https://www.thesimpledollar.com/feed/"
+   },
+   {
+    "t": "My Money Blog",
+    "u": "https://www.mymoneyblog.com/feed"
+   },
+   {
+    "t": "The Financial Diet",
+    "u": "https://thefinancialdiet.com/feed/"
+   },
+   {
+    "t": "Monevator",
+    "u": "http://feeds.feedburner.com/Monevatorcom"
+   },
+   {
+    "t": "Bible Money Matters",
+    "u": "https://feeds.feedburner.com/BibleMoneyMatters"
+   },
+   {
+    "t": "Women Who Money Blog",
+    "u": "https://womenwhomoney.com/feed/"
+   },
+   {
+    "t": "MapleMoney",
+    "u": "https://maplemoney.com/feed/"
+   },
+   {
+    "t": "Fitnancials Blog",
+    "u": "https://www.fitnancials.com/feed/"
+   },
+   {
+    "t": "Radical FIRE",
+    "u": "https://radicalfire.com/feed/"
+   },
+   {
+    "t": "Passive Income M.D Blog",
+    "u": "https://passiveincomemd.com/feed/"
+   },
+   {
+    "t": "Budgets Are Sexy",
+    "u": "https://feeds.feedburner.com/budgetsaresexy"
+   },
+   {
+    "t": "Money Ning",
+    "u": "https://feeds.feedburner.com/MoneyNing"
+   },
+   {
+    "t": "Afford Anything Blog",
+    "u": "https://feeds.feedburner.com/AffordAnythingFeed"
+   },
+   {
+    "t": "Money Smart Guides",
+    "u": "https://www.moneysmartguides.com/feed/"
+   },
+   {
+    "t": "Frugalwoods Blog",
+    "u": "https://frugalwoods.com/blog/feed/"
+   },
+   {
+    "t": "The Mini Millionaire",
+    "u": "https://theminimillionaire.com/feed/"
+   },
+   {
+    "t": "Penny Pinchin Mom Blog",
+    "u": "https://pennypinchinmom.com/feed/"
+   },
+   {
+    "t": "Clever Dude",
+    "u": "https://www.cleverdude.com/feed/"
+   },
+   {
+    "t": "The Best Interest Blog",
+    "u": "https://bestinterest.blog/feed/"
+   },
+   {
+    "t": "The Define Financial Blog",
+    "u": "https://www.definefinancial.com/feed/"
+   },
+   {
+    "t": "My Fab Finance Blog",
+    "u": "https://myfabfinance.com/feed/"
+   },
+   {
+    "t": "rich & REGULAR Blog",
+    "u": "https://richandregular.com/feed/"
+   },
+   {
+    "t": "Getting Your Financial Ducks In A Row",
+    "u": "https://feeds.feedburner.com/GettingYourFinancialDucksInARow"
+   },
+   {
+    "t": "The Debt Myth",
+    "u": "https://www.jackiebeck.com/feed/"
+   },
+   {
+    "t": "Time In the Market",
+    "u": "https://timeinthemarket.com/feed/"
+   },
+   {
+    "t": "A Wealth of Common Sense",
+    "u": "https://awealthofcommonsense.com/feed/"
+   },
+   {
+    "t": "Money Under 30",
+    "u": "https://www.moneyunder30.com/feed"
+   },
+   {
+    "t": "Mr. Money Mustache Blog",
+    "u": "https://www.mrmoneymustache.com/blog/feed/"
+   },
+   {
+    "t": "SavingAdvice.com",
+    "u": "https://www.savingadvice.com/feed/"
+   },
+   {
+    "t": "FinMasters",
+    "u": "https://finmasters.com/feed/"
+   },
+   {
+    "t": "Wallet Squirrel",
+    "u": "https://walletsquirrel.com/feed/"
+   },
+   {
+    "t": "Financial Gym Blog",
+    "u": "https://financialgym.com/blog?format=rss"
+   },
+   {
+    "t": "Everything Finance Blog",
+    "u": "https://everythingfinanceblog.com/feed"
+   },
+   {
+    "t": "Dinks Finance",
+    "u": "https://www.dinksfinance.com/feed/"
+   },
+   {
+    "t": "Lazy Man and Money Blog",
+    "u": "https://www.lazymanandmoney.com/feed/"
+   },
+   {
+    "t": "Modern Frugality Blog",
+    "u": "https://www.modernfrugality.com/blog/feed/"
+   },
+   {
+    "t": "My Own Advisor",
+    "u": "https://www.myownadvisor.ca/feed/"
+   },
+   {
+    "t": "Money Saved is Money Earned",
+    "u": "https://moneysavedmoneyearned.com/feed/"
+   },
+   {
+    "t": "1 Finance Blog",
+    "u": "https://1finance.co.in/1f-dashboard/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: News and Publications",
+  "items": [
+   {
+    "t": "TechCrunch » Startups",
+    "u": "https://techcrunch.com/category/startups/feed/"
+   },
+   {
+    "t": "The Startup Magazine",
+    "u": "https://thestartupmag.com/feed/"
+   },
+   {
+    "t": "Startup Daily",
+    "u": "https://www.startupdaily.net/feed/"
+   },
+   {
+    "t": "Startups",
+    "u": "https://startups.co.uk/feed/"
+   },
+   {
+    "t": "EU-Startups",
+    "u": "https://www.eu-startups.com/feed/"
+   },
+   {
+    "t": "StartUs Magazine",
+    "u": "https://magazine.startus.cc/feed/"
+   },
+   {
+    "t": "StartupNation.com",
+    "u": "https://startupnation.com/feed/"
+   },
+   {
+    "t": "Silicon Canals",
+    "u": "https://siliconcanals.com/news/startups/feed/"
+   },
+   {
+    "t": "Grit Daily",
+    "u": "https://gritdaily.com/feed/"
+   },
+   {
+    "t": "Your Story",
+    "u": "https://yourstory.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: VC and Investor Blogs",
+  "items": [
+   {
+    "t": "Steve Blank",
+    "u": "https://steveblank.com/feed/"
+   },
+   {
+    "t": "Andrew Chen",
+    "u": "https://andrewchen.com/feed/"
+   },
+   {
+    "t": "This is going to be BIG Blog",
+    "u": "https://www.thisisgoingtobebig.com/blog?format=rss"
+   },
+   {
+    "t": "OurCrowd Blog",
+    "u": "https://blog.ourcrowd.com/feed/"
+   },
+   {
+    "t": "Venionaire Capital News",
+    "u": "https://www.venionaire.com/feed/"
+   },
+   {
+    "t": "Feld Thoughts Blog",
+    "u": "https://feld.com/blog/feed/"
+   },
+   {
+    "t": "Both Sides of the Table",
+    "u": "https://bothsidesofthetable.com/feed"
+   },
+   {
+    "t": "500 Hats",
+    "u": "https://500hats.com/feed"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Strategy, Funding and Growth",
+  "items": [
+   {
+    "t": "Gust Blog",
+    "u": "https://gust.com/blog/feed/"
+   },
+   {
+    "t": "York IE Blog",
+    "u": "https://york.ie/feed/"
+   },
+   {
+    "t": "Crowdwise Blog",
+    "u": "https://crowdwise.org/feed/"
+   },
+   {
+    "t": "StartupDevKit",
+    "u": "https://startupdevkit.com/feed/"
+   },
+   {
+    "t": "Start it up",
+    "u": "https://medium.com/feed/swlh"
+   },
+   {
+    "t": "Alltopstartups",
+    "u": "https://alltopstartups.com/feed/"
+   },
+   {
+    "t": "For Entrepreneurs Blog",
+    "u": "https://www.forentrepreneurs.com/feed/"
+   },
+   {
+    "t": "Lighter Capital",
+    "u": "https://www.lightercapital.com/blog/feed/"
+   },
+   {
+    "t": "Startup Stories",
+    "u": "https://startupgenome.com/rss.xml"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Founder Thought Leaders",
+  "items": [
+   {
+    "t": "A Smart Bear",
+    "u": "https://longform.asmartbear.com/index.xml"
+   },
+   {
+    "t": "OnStartups",
+    "u": "https://www.onstartups.com/rss.xml"
+   },
+   {
+    "t": "The Startup CEO",
+    "u": "https://startupceo.com/feed"
+   },
+   {
+    "t": "The Founder Coach",
+    "u": "https://medium.dave-bailey.com/feed"
+   },
+   {
+    "t": "Startup Hacks by Alex Iskold Blog",
+    "u": "https://www.startuphacks.vc/blog?format=rss"
+   },
+   {
+    "t": "Entrepreneur’s Handbook",
+    "u": "https://entrepreneurshandbook.co/feed"
+   },
+   {
+    "t": "Red Rocket Ventures Blog",
+    "u": "http://redrocketvc.blogspot.com/feeds/posts/default?alt=rss"
+   },
+   {
+    "t": "Samir Adams Ghosh’s Blog",
+    "u": "https://www.ghosh.com/blog/feed/"
+   },
+   {
+    "t": "Startup Management",
+    "u": "https://startupmanagement.org/feed/"
+   },
+   {
+    "t": "Aaron Vick",
+    "u": "https://aaronvick.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Accelerators and Programs",
+  "items": [
+   {
+    "t": "Y Combinator Blog",
+    "u": "https://www.ycombinator.com/blog/feed"
+   },
+   {
+    "t": "Lean Startup Co.",
+    "u": "https://leanstartup.co/feed/"
+   },
+   {
+    "t": "StartupYard Blog",
+    "u": "http://startupyard.com/feed/"
+   },
+   {
+    "t": "Startup Highway Blog",
+    "u": "https://startuphighway.com/feed/"
+   },
+   {
+    "t": "StartupBlink Blog",
+    "u": "https://www.startupblink.com/blog/feed/"
+   },
+   {
+    "t": "Starteer",
+    "u": "https://www.starteer.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Regional Ecosystems",
+  "items": [
+   {
+    "t": "Startup Boston Blog",
+    "u": "https://www.startupbos.org/blog-feed.xml"
+   },
+   {
+    "t": "Silicon Florist",
+    "u": "https://feeds.feedburner.com/siliconflorist"
+   },
+   {
+    "t": "AlleyWatch » Startups",
+    "u": "https://www.alleywatch.com/category/startups/feed/"
+   },
+   {
+    "t": "Startup Sac",
+    "u": "https://startupsac.com/feed/"
+   },
+   {
+    "t": "Startup Canada Blog",
+    "u": "https://www.startupcan.ca/feed/"
+   },
+   {
+    "t": "Austin Startups",
+    "u": "https://austinstartups.com/feed"
+   },
+   {
+    "t": "Startup San Diego",
+    "u": "https://startupsd.org/feed/"
+   },
+   {
+    "t": "Startup Edmonton Blog",
+    "u": "https://www.startupedmonton.com/blog?format=RSS"
+   }
+  ]
+ },
+ {
+  "name": "Startups: International Ecosystems",
+  "items": [
+   {
+    "t": "e27",
+    "u": "https://e27.co/index_wp.php/feed/"
+   },
+   {
+    "t": "StartupJuncture",
+    "u": "https://startupjuncture.com/feed/"
+   },
+   {
+    "t": "Barcinno",
+    "u": "http://www.barcinno.com/feed/"
+   },
+   {
+    "t": "NZ Entrepreneur",
+    "u": "https://nzentrepreneur.co.nz/feed/"
+   },
+   {
+    "t": "Future Startup",
+    "u": "https://futurestartup.com/feed/"
+   },
+   {
+    "t": "Way2World",
+    "u": "http://www.way2world.in/feed"
+   },
+   {
+    "t": "Startup News",
+    "u": "https://startupnews.com.au/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Women, Diversity and Niche Founders",
+  "items": [
+   {
+    "t": "WECAN",
+    "u": "https://wecanmag.com/feed/"
+   },
+   {
+    "t": "The Happy Startup School Blog",
+    "u": "https://medium.com/feed/the-happy-startup-school"
+   },
+   {
+    "t": "StartupTipsDaily",
+    "u": "https://startuptipsdaily.com/feed/"
+   },
+   {
+    "t": "StartupLagos",
+    "u": "https://www.startuplagos.co/feed/"
+   }
+  ]
+ },
+ {
+  "name": "Startups: Service Providers and Vendors",
+  "items": [
+   {
+    "t": "Escalon Blog",
+    "u": "https://escalon.services/blog/feed"
+   },
+   {
+    "t": "Low Cost Letterbox Blog",
+    "u": "https://www.lowcostletterbox.com/blog/feed/"
+   },
+   {
+    "t": "CobbleWeb Blog",
+    "u": "https://www.cobbleweb.co.uk/feed/"
+   },
+   {
+    "t": "YayPay Blog",
+    "u": "https://www.yaypay.com/blog/rss.xml"
+   },
+   {
+    "t": "Sloboda studio Blog",
+    "u": "https://sloboda-studio.com/blog/feed/"
+   },
+   {
+    "t": "Graffersid Blog",
+    "u": "https://graffersid.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Breaking",
+  "items": [
+   {
+    "t": "Fox News",
+    "u": "https://moxie.foxnews.com/google-publisher/latest.xml"
+   },
+   {
+    "t": "BBC News",
+    "u": "https://feeds.bbci.co.uk/news/rss.xml"
+   },
+   {
+    "t": "Sky News",
+    "u": "https://feeds.skynews.com/feeds/rss/home.xml"
+   }
+  ]
+ },
+ {
+  "name": "News: Politics and Government",
+  "items": [
+   {
+    "t": "The Hill",
+    "u": "https://thehill.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: World",
+  "items": [
+   {
+    "t": "BBC News » World",
+    "u": "https://feeds.bbci.co.uk/news/world/rss.xml"
+   },
+   {
+    "t": "Al Jazeera",
+    "u": "https://www.aljazeera.com/rss"
+   },
+   {
+    "t": "The Guardian » World",
+    "u": "https://www.theguardian.com/world/rss"
+   },
+   {
+    "t": "The Washington Post » World",
+    "u": "https://feeds.washingtonpost.com/rss/world"
+   },
+   {
+    "t": "NPR",
+    "u": "https://feeds.npr.org/1001/rss.xml"
+   }
+  ]
+ },
+ {
+  "name": "News: Business",
+  "items": [
+   {
+    "t": "CNBC » Business",
+    "u": "https://www.cnbc.com/id/10001147/device/rss/rss.html"
+   },
+   {
+    "t": "Financial Times",
+    "u": "https://www.ft.com/rss/home/international"
+   },
+   {
+    "t": "The Wall Street Journal » Business",
+    "u": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness"
+   },
+   {
+    "t": "BBC News » Business",
+    "u": "https://feeds.bbci.co.uk/news/business/rss.xml"
+   },
+   {
+    "t": "International Business Times",
+    "u": "https://www.ibtimes.com/rss"
+   }
+  ]
+ },
+ {
+  "name": "News: Technology",
+  "items": [
+   {
+    "t": "TechCrunch",
+    "u": "https://techcrunch.com/feed/"
+   },
+   {
+    "t": "CNET",
+    "u": "https://www.cnet.com/rss/news/"
+   },
+   {
+    "t": "Ars Technica",
+    "u": "https://feeds.arstechnica.com/arstechnica/index"
+   },
+   {
+    "t": "TechRadar",
+    "u": "https://www.techradar.com/feeds.xml"
+   }
+  ]
+ },
+ {
+  "name": "News: Sports",
+  "items": [
+   {
+    "t": "ESPN",
+    "u": "https://www.espn.com/espn/rss/news"
+   },
+   {
+    "t": "BBC Sport",
+    "u": "https://feeds.bbci.co.uk/sport/rss.xml"
+   },
+   {
+    "t": "FOX Sports",
+    "u": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30"
+   },
+   {
+    "t": "NBC Sports",
+    "u": "https://www.nbcsports.com/index.atom"
+   },
+   {
+    "t": "Yahoo Sports",
+    "u": "https://sports.yahoo.com/rss/"
+   }
+  ]
+ },
+ {
+  "name": "News: Entertainment",
+  "items": [
+   {
+    "t": "Variety",
+    "u": "https://variety.com/feed/rss/"
+   },
+   {
+    "t": "The Hollywood Reporter",
+    "u": "https://www.hollywoodreporter.com/feed/rss/"
+   },
+   {
+    "t": "Deadline",
+    "u": "https://deadline.com/feed/rss/"
+   }
+  ]
+ },
+ {
+  "name": "News: Health",
+  "items": [
+   {
+    "t": "News Medical",
+    "u": "https://www.news-medical.net/syndication.axd?format=rss"
+   },
+   {
+    "t": "Health.com",
+    "u": "https://feeds-api.dotdashmeredith.com/v1/rss/google/adf185b2-ff7d-4fe3-a978-b59ff8528c53"
+   }
+  ]
+ },
+ {
+  "name": "News: Crime and Justice",
+  "items": [
+   {
+    "t": "Crime Online",
+    "u": "https://www.crimeonline.com/feed/"
+   },
+   {
+    "t": "Court TV",
+    "u": "https://www.courttv.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Science and Nature",
+  "items": [
+   {
+    "t": "Nature.com",
+    "u": "https://www.nature.com/nature.rss"
+   },
+   {
+    "t": "sciencenews.org",
+    "u": "https://www.sciencenews.org/feed"
+   },
+   {
+    "t": "SciTechDaily",
+    "u": "https://scitechdaily.com/feed/"
+   },
+   {
+    "t": "Science Daily",
+    "u": "https://www.sciencedaily.com/rss/all.xml"
+   }
+  ]
+ },
+ {
+  "name": "News: Lifestyle and Culture",
+  "items": [
+   {
+    "t": "People.com » Lifestyle",
+    "u": "https://feeds-api.dotdashmeredith.com/v1/rss/google/85fdec1d-95a2-4e50-8641-5e2d0ef816a7"
+   },
+   {
+    "t": "BBC Culture",
+    "u": "https://www.bbc.com/culture/feed.rss"
+   },
+   {
+    "t": "Harper’s BAZAAR » Culture",
+    "u": "https://www.harpersbazaar.com/rss/culture.xml"
+   },
+   {
+    "t": "The Wall Street Journal » Arts & Culture",
+    "u": "https://feeds.content.dowjones.io/public/rss/RSSArtsCulture"
+   }
+  ]
+ },
+ {
+  "name": "News: Weather and Disasters",
+  "items": [
+   {
+    "t": "The Guardian » Natural Disasters",
+    "u": "https://www.theguardian.com/world/natural--disasters/rss"
+   }
+  ]
+ },
+ {
+  "name": "News: Opinion",
+  "items": [
+   {
+    "t": "The New York Times » Opinion",
+    "u": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/opinion/rss.xml"
+   },
+   {
+    "t": "The Guardian » Opinion",
+    "u": "https://www.theguardian.com/uk/commentisfree/rss"
+   },
+   {
+    "t": "The Washington Post » Opinion",
+    "u": "https://feeds.washingtonpost.com/rss/opinions"
+   },
+   {
+    "t": "The Hill » Opinion",
+    "u": "https://thehill.com/opinion/feed/"
+   },
+   {
+    "t": "The Wall Street Journal » Opinion",
+    "u": "https://feeds.content.dowjones.io/public/rss/RSSOpinion"
+   }
+  ]
+ },
+ {
+  "name": "News: Environment",
+  "items": [
+   {
+    "t": "The Guardian » Environment",
+    "u": "https://www.theguardian.com/uk/environment/rss"
+   },
+   {
+    "t": "Earth.Org",
+    "u": "https://earth.org/feed"
+   },
+   {
+    "t": "Green Matters",
+    "u": "https://www.greenmatters.com/rss"
+   }
+  ]
+ },
+ {
+  "name": "News: Finance and Crypto",
+  "items": [
+   {
+    "t": "Financial Times » Cryptofinance",
+    "u": "https://www.ft.com/crypto?format=rss"
+   },
+   {
+    "t": "CryptoSlate",
+    "u": "https://cryptoslate.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Economics",
+  "items": [
+   {
+    "t": "The Economic Times",
+    "u": "https://economictimes.indiatimes.com/News/rssfeeds/1715249553.cms"
+   },
+   {
+    "t": "Economy Watch",
+    "u": "https://www.economywatch.com/feed"
+   },
+   {
+    "t": "Newsmax » Economy",
+    "u": "https://www.newsmax.com/rss/economy/2/"
+   },
+   {
+    "t": "The New York Times » Economy",
+    "u": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/economy/rss.xml"
+   },
+   {
+    "t": "NPR » Economy",
+    "u": "https://feeds.npr.org/1006/rss.xml"
+   },
+   {
+    "t": "AlterNet » Economy",
+    "u": "https://www.alternet.org/feeds/economy.rss"
+   },
+   {
+    "t": "Financial Post » Economy",
+    "u": "https://financialpost.com/category/news/economy/feed.xml"
+   },
+   {
+    "t": "City A.M. » Economics",
+    "u": "https://www.cityam.com/category/economics/feed/"
+   },
+   {
+    "t": "The Hindu BusinessLine » Economy",
+    "u": "https://www.thehindubusinessline.com/economy/feeder/default.rss"
+   },
+   {
+    "t": "Business Daily Africa » Economy",
+    "u": "https://www.businessdailyafrica.com/service/rss/bd/1939134/feed.rss"
+   }
+  ]
+ },
+ {
+  "name": "News: Education",
+  "items": [
+   {
+    "t": "Education Week",
+    "u": "https://www.edweek.org/index.rss"
+   },
+   {
+    "t": "Inside Higher Ed",
+    "u": "https://www.insidehighered.com/rss.xml"
+   },
+   {
+    "t": "The Chronicle of Higher Education",
+    "u": "https://www.chronicle.com/index.atom"
+   },
+   {
+    "t": "ET Education",
+    "u": "https://education.economictimes.indiatimes.com/rss/recentstories"
+   },
+   {
+    "t": "The 74",
+    "u": "https://www.the74million.org/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Food and Drink",
+  "items": [
+   {
+    "t": "Eater",
+    "u": "https://www.eater.com/rss/index.xml"
+   },
+   {
+    "t": "The Guardian » Food & Drink",
+    "u": "https://www.theguardian.com/business/fooddrinks/rss"
+   },
+   {
+    "t": "Financial Times » Food & Drink",
+    "u": "https://www.ft.com/food-drink?format=rss"
+   },
+   {
+    "t": "Forbes » Food & Drink",
+    "u": "https://www.forbes.com/food-drink/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Travel",
+  "items": [
+   {
+    "t": "Travel and Leisure",
+    "u": "https://feeds-api.dotdashmeredith.com/v1/rss/google/90b927aa-066f-4f66-9162-a018ad8ea366"
+   },
+   {
+    "t": "Skift",
+    "u": "https://skift.com/feed"
+   },
+   {
+    "t": "TravelDailyNews International",
+    "u": "https://www.traveldailynews.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Fashion and Beauty",
+  "items": [
+   {
+    "t": "WWD » Fashion News",
+    "u": "https://wwd.com/fashion-news/feed/"
+   },
+   {
+    "t": "The Guardian » Fashion",
+    "u": "https://www.theguardian.com/fashion/rss"
+   },
+   {
+    "t": "Elle",
+    "u": "https://www.elle.com/rss/default.xml"
+   },
+   {
+    "t": "Who What Wear",
+    "u": "https://www.whowhatwear.com/feeds.xml"
+   },
+   {
+    "t": "New York Post » Fashion & Beauty",
+    "u": "https://nypost.com/fashion-and-beauty/feed/"
+   },
+   {
+    "t": "Vogue",
+    "u": "https://www.vogue.com/feed/rss"
+   },
+   {
+    "t": "Marie Claire",
+    "u": "https://www.marieclaire.com/feeds.xml"
+   }
+  ]
+ },
+ {
+  "name": "News: Celebrity",
+  "items": [
+   {
+    "t": "Page Six",
+    "u": "https://pagesix.com/feed/"
+   },
+   {
+    "t": "People.com » Celebrity",
+    "u": "https://feeds-api.dotdashmeredith.com/v1/rss/google/79365970-e87d-4fb6-966a-1c657b08f44f"
+   },
+   {
+    "t": "New York Post » Celebrity News",
+    "u": "https://nypost.com/celebrities/feed/"
+   },
+   {
+    "t": "The Sun » Celebrities",
+    "u": "https://www.thesun.co.uk/tvandshowbiz/celebrities/feed/"
+   },
+   {
+    "t": "Hollywood Life",
+    "u": "https://hollywoodlife.com/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Social Justice and Activism",
+  "items": [
+   {
+    "t": "The Nation » Social Justice",
+    "u": "https://www.thenation.com/subject/social-justice/feed/"
+   },
+   {
+    "t": "Progressive » Social Justice",
+    "u": "https://progressive.org/topics/social-justice/index.rss"
+   },
+   {
+    "t": "The Conversation » Social Justice",
+    "u": "https://theconversation.com/topics/social-justice-1227/articles.atom"
+   },
+   {
+    "t": "Activist Post",
+    "u": "https://feeds.feedburner.com/ActivistPost"
+   },
+   {
+    "t": "The Nation » Activism",
+    "u": "https://www.thenation.com/subject/activism/feed/"
+   }
+  ]
+ },
+ {
+  "name": "News: Human Rights",
+  "items": [
+   {
+    "t": "Amnesty International",
+    "u": "https://www.amnesty.org/en/feed/"
+   },
+   {
+    "t": "The Guardian » Human Rights",
+    "u": "https://www.theguardian.com/law/human-rights/rss"
+   }
+  ]
+ },
+ {
+  "name": "News: Automotive",
+  "items": [
+   {
+    "t": "Car and Driver",
+    "u": "https://www.caranddriver.com/rss/all.xml/"
+   },
+   {
+    "t": "WardsAuto",
+    "u": "https://www.wardsauto.com/feeds/news/"
+   },
+   {
+    "t": "InsideEVs",
+    "u": "https://insideevs.com/rss/news/all/"
+   },
+   {
+    "t": "The Verge » Transportation",
+    "u": "https://www.theverge.com/transportation/rss/index.xml"
+   }
+  ]
+ }
+]
